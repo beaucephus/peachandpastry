@@ -9,7 +9,7 @@ const app = express();
 // Redirect non-www domain requests to www. domains.
 app.use(forceDomain({
   hostname: 'www.peachandpastry.com',
-  protocol: 'https',
+  protocol: 'http',
   excludeRule: /[a-zA-Z0-9][a-zA-Z0-9-]+\.herokuapp\.com/i
 }));
 
