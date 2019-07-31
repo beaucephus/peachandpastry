@@ -1,26 +1,43 @@
 <mat-toolbar color="primary">
-  <button mat-icon-button (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
-  <span class="gap"></span>
-  <img height="80%" src="assets/peachandpastry_02.png" alt="Peach & Pastry logo"/>
-  <span class="gap"></span>
-  <h1>Peach & Pastry</h1>
-  <span fxFlex="1 1 auto"></span>
+  <mat-toolbar-row>
+    <img height="80%" src="assets/peachandpastry_02.png" alt="Peach & Pastry logo"/>
+    <span class="gap"></span>
+    <h1>Peach & Pastry</h1>
+    <span fxFlex="1 1 auto"></span>
+  </mat-toolbar-row>
 </mat-toolbar>
-<mat-sidenav-container>
-  <mat-sidenav #sidenav class="pap-sidenav">
-    <mat-nav-list role="list">
-      <mat-list-item role="listitem">Home</mat-list-item>
-      <mat-list-item role="listitem">Blog</mat-list-item>
-      <mat-list-item role="listitem">Gallery</mat-list-item>
-      <mat-list-item role="listitem">Repertoire</mat-list-item>
-    </mat-nav-list>
-  </mat-sidenav>
 
-  <mat-sidenav-content>
-    <mat-card>
-      <mat-card-content>
-        <img mat-card-image src="assets/demo.jpg"/>
-      </mat-card-content>
-    </mat-card>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<nav mat-tab-nav-bar>
+  <a mat-tab-link routerLink="/home" routerLinkActive="active">
+    <span fxLayout="row" fxLayoutGap="5%" fxLayoutAlign="center center">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </span>
+  </a>
+
+  <a mat-tab-link routerLink="/creations" routerLinkActive="active">
+    <span fxLayout="row" fxLayoutGap="5%" fxLayoutAlign="center center">
+      <mat-icon>cake</mat-icon>
+      <span>Creations</span>
+    </span>
+  </a>
+
+  <a mat-tab-link routerLink="/gallery" routerLinkActive="active">
+    <span fxLayout="row" fxLayoutGap="5%" fxLayoutAlign="center center">
+      <mat-icon>collections</mat-icon>
+      <span>Gallery</span>
+    </span>
+  </a>
+
+  <a mat-tab-link routerLink="/contact" routerLinkActive="active">
+    <span fxLayout="row" fxLayoutGap="5%" fxLayoutAlign="center center">
+      <mat-icon>email</mat-icon>
+      <span>Contact</span>
+    </span>
+  </a>
+</nav>
+
+<router-outlet></router-outlet>
+<!-- Routed components go here -->
+
+
