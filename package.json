@@ -7,7 +7,7 @@
   },
   "scripts": {
     "ng": "ng",
-    "start": "node frontend.js",
+    "start": "node_modules/.bin/ts-node frontend.ts",
     "heroku-postbuild": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
