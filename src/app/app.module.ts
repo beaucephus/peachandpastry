@@ -14,10 +14,10 @@ import { HomeComponent } from './home/home.component';
 import { CreationsComponent } from './creations/creations.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ContactComponent } from './contact/contact.component';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: HomeComponent },
+  { path: '', component: HomeComponent },
   { path: 'creations', component: CreationsComponent },
   { path: 'gallery', component: GalleryComponent },
   { path: 'contact', component: ContactComponent },
@@ -43,7 +43,8 @@ const appRoutes: Routes = [
     MaterialModule,
     FormsModule,
     FlexLayoutModule,
-    SlideshowModule
+    SlideshowModule,
+    CarouselModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
